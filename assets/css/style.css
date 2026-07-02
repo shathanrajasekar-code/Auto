@@ -1,0 +1,392 @@
+/* Premium Dark Glassmorphism Design System - VeloParts */
+
+:root {
+    --primary-color: #0d1527;
+    --accent-color: #f75d00;
+    --accent-hover: #d65000;
+    --glass-bg: rgba(255, 255, 255, 0.04);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    --glass-blur: blur(12px);
+}
+
+body {
+    background: radial-gradient(circle at 50% 50%, #0f172a, #020617) !important;
+    color: #f1f5f9 !important;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Override standard headings & text to contrast well on dark background */
+h1, h2, h3, h4, h5, h6, .text-dark, .card-title, .modal-title, .form-label, th, td, strong {
+    color: #f8fafc !important;
+}
+
+.text-muted, p, .text-secondary, small {
+    color: #94a3b8 !important;
+}
+
+/* Glassmorphic Cards & Panels */
+.card, .product-card, .list-group-item, .modal-content, .navbar-admin {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border: 1px solid var(--glass-border) !important;
+    box-shadow: var(--glass-shadow) !important;
+    color: #e2e8f0 !important;
+    border-radius: 12px !important;
+}
+
+/* Glassmorphic Background Utilities (for full-width layouts/sections) */
+.bg-light, .bg-white, .navbar-light {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    color: #e2e8f0 !important;
+}
+
+.card-header, .modal-header, .modal-footer {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border-bottom: 1px solid var(--glass-border) !important;
+}
+
+/* Table & Layout borders */
+.table, th, td, .border, .border-light, .border-secondary {
+    border-color: var(--glass-border) !important;
+    color: #e2e8f0 !important;
+}
+
+/* Text Inputs / Select boxes */
+.form-control, .form-select, .input-group-text {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid var(--glass-border) !important;
+    color: #fff !important;
+    border-radius: 8px !important;
+}
+.form-control:focus, .form-select:focus {
+    background: rgba(255, 255, 255, 0.07) !important;
+    border-color: var(--accent-color) !important;
+    color: #fff !important;
+    box-shadow: 0 0 0 0.25rem rgba(247, 93, 0, 0.25) !important;
+}
+.form-control::placeholder {
+    color: #64748b !important;
+}
+.form-select option {
+    background-color: #0f172a !important;
+    color: #fff !important;
+}
+
+/* Custom Navigation Header */
+header, .bg-navy, nav.navbar {
+    background: rgba(2, 6, 23, 0.7) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border-bottom: 1px solid var(--glass-border) !important;
+}
+
+.bg-dark-blue {
+    background: rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid var(--glass-border) !important;
+}
+
+/* Autocomplete search results dropdown */
+#liveSearchResults {
+    background: rgba(15, 23, 42, 0.95) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 8px !important;
+}
+
+.list-group-item-action {
+    background: transparent !important;
+    color: #f1f5f9 !important;
+    border: none !important;
+}
+.list-group-item-action:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #fff !important;
+}
+
+.text-orange {
+    color: var(--accent-color) !important;
+}
+
+.hover-orange:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Custom Buttons */
+.btn-accent {
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+    color: white !important;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    border-radius: 8px !important;
+}
+
+.btn-accent:hover, .btn-accent:focus {
+    background-color: var(--accent-hover) !important;
+    border-color: var(--accent-hover) !important;
+}
+
+.btn-orange {
+    background-color: var(--accent-color) !important;
+    border: none !important;
+    color: white !important;
+}
+
+.btn-orange:hover {
+    background-color: var(--accent-hover) !important;
+}
+
+.btn-outline-light {
+    border-color: var(--glass-border) !important;
+    color: #cbd5e1 !important;
+}
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: #fff !important;
+}
+
+/* Product Cards image container hover styles */
+.product-card {
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+    border-color: var(--accent-color) !important;
+}
+
+.product-card .card-img-container {
+    height: 200px;
+    background: rgba(255, 255, 255, 0.02) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.product-card .card-img-container img {
+    max-height: 90%;
+    max-width: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.product-card .badge-condition {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Badge variants */
+.badge.bg-success {
+    background-color: rgba(16, 185, 129, 0.2) !important;
+    color: #10b981 !important;
+    border: 1px solid rgba(16, 185, 129, 0.3) !important;
+}
+
+.badge.bg-warning {
+    background-color: rgba(245, 158, 11, 0.2) !important;
+    color: #f59e0b !important;
+    border: 1px solid rgba(245, 158, 11, 0.3) !important;
+}
+
+.badge.bg-danger {
+    background-color: rgba(239, 68, 68, 0.2) !important;
+    color: #ef4444 !important;
+    border: 1px solid rgba(239, 68, 68, 0.3) !important;
+}
+
+.badge.bg-primary {
+    background-color: rgba(59, 130, 246, 0.2) !important;
+    color: #3b82f6 !important;
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+}
+
+.badge.bg-info {
+    background-color: rgba(6, 182, 212, 0.2) !important;
+    color: #06b6d4 !important;
+    border: 1px solid rgba(6, 182, 212, 0.3) !important;
+}
+
+.badge.bg-secondary {
+    background-color: rgba(107, 114, 128, 0.2) !important;
+    color: #9ca3af !important;
+    border: 1px solid rgba(107, 114, 128, 0.3) !important;
+}
+
+/* Custom fitment container styles */
+.bg-light-orange {
+    background-color: rgba(247, 93, 0, 0.08) !important;
+    border: 1px solid rgba(247, 93, 0, 0.15) !important;
+}
+
+/* Pagination modifications */
+.page-link {
+    background: var(--glass-bg) !important;
+    border-color: var(--glass-border) !important;
+    color: #e2e8f0 !important;
+}
+.page-link:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #fff !important;
+}
+.page-item.active .page-link {
+    background: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+    color: white !important;
+}
+.page-item.disabled .page-link {
+    background: rgba(255, 255, 255, 0.01) !important;
+    border-color: var(--glass-border) !important;
+    color: #4b5563 !important;
+}
+
+/* Admin sidebar overrides */
+.admin-sidebar {
+    background-color: rgba(15, 23, 42, 0.95) !important;
+    backdrop-filter: var(--glass-blur);
+    border-right: 1px solid var(--glass-border);
+}
+
+/* Category Cards (homepage browse-by-category) */
+.category-card {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 12px !important;
+    color: #e2e8f0 !important;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.category-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 8px 24px rgba(247, 93, 0, 0.15) !important;
+    color: #fff !important;
+}
+
+/* Dropdown menus */
+.dropdown-menu {
+    background: rgba(15, 23, 42, 0.95) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 8px !important;
+}
+.dropdown-item {
+    color: #e2e8f0 !important;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #fff !important;
+}
+.dropdown-item.active {
+    background: var(--accent-color) !important;
+    color: #fff !important;
+}
+
+/* Footer glassmorphism */
+footer {
+    background: rgba(2, 6, 23, 0.8) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+}
+
+/* Skeleton loader */
+.skeleton-card {
+    background: var(--glass-bg) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.skeleton-card .skeleton-img,
+.skeleton-card .skeleton-line {
+    background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 75%) !important;
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Glassmorphic form checks */
+.form-check-input {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: var(--glass-border) !important;
+}
+.form-check-input:checked {
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+}
+.form-check-label {
+    color: #cbd5e1 !important;
+}
+
+/* Smooth anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Link colors */
+a {
+    color: var(--accent-color);
+}
+a:hover {
+    color: var(--accent-hover);
+}
+a.text-dark, a.text-dark:hover {
+    color: #f8fafc !important;
+}
+
+/* Breadcrumb */
+.breadcrumb-item a {
+    color: var(--accent-color) !important;
+}
+.breadcrumb-item.active {
+    color: #94a3b8 !important;
+}
+
+/* Alert / Toast */
+.alert {
+    background: var(--glass-bg) !important;
+    border: 1px solid var(--glass-border) !important;
+    color: #e2e8f0 !important;
+    border-radius: 8px !important;
+}
+.alert-success {
+    border-color: rgba(16, 185, 129, 0.3) !important;
+}
+.alert-danger {
+    border-color: rgba(239, 68, 68, 0.3) !important;
+}
+.alert-warning {
+    border-color: rgba(245, 158, 11, 0.3) !important;
+}

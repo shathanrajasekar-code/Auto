@@ -1,0 +1,10 @@
+# Local portable binaries
+/bin/php/
+/bin/mariadb/
+
+# OS/IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
